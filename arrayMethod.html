@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //push
+        let car = ['ford', 'audi', 'bmw', 'porche'];
+        car.push("ferrari", "hyundai");
+        console.log(car);
+        //pop
+        let fruits = ['apple', 'mango', 'grapes', 'banana'];
+        fruits.pop();
+        console.log(fruits);
+
+        //unshift
+        let developer = ['narayan', 'ajay', 'anshul', 'priyanka'];
+        developer.unshift("pawan")
+        console.log(developer)
+
+        //shift
+        let lang = ['c', 'c++', 'java', 'python'];
+        lang.shift();
+        console.log(lang)
+
+        //delete
+
+        let veg = ['cabbage', 'carrot', 'ladyfinger', 'capsicum', 'potato'];
+
+        delete veg[2];
+        console.log(veg);
+
+        //join
+        let juice = ['lichi', 'coconut', 'lemon'];
+        let juices = juice.join('-')
+
+        console.log(juice);
+        console.log(juices)
+
+
+        //sort
+        // let alpha = ['z','j','n','a','k','p'];
+        let alpha = ['cabbage', 'carrot', 'ladyfinger', 'capsicum', 'potato'];
+        let alp = ['amit', 'ajay', 'aane', 'anshul', 'ankit', 'arjun', 'anurag', 'aaan']
+
+        alp.sort();
+        console.log(alp)
+
+        let num = [88, 51, 9, 1, 111, 2, 14];
+        num.sort((x, y) => {
+            return x - y;
+        })
+        console.log(num)
+
+        //flat
+
+     let fat = [['a','j'],['a','y'],['r','a','j'],['a','b','c']]
+
+     let flat = fat.flat()
+     console.log(flat)
+     console.log(fat);
+
+     //concat
+
+     let student = ['pawan','ankit','anas','priyanka'];
+     let newStu =['narayan','ajay','anshul','amit'];
+     let addStu= ['dheeraj','aman','abhishek','akshara']
+
+     let totalStudent = student.concat(newStu,addStu);
+     console.log(totalStudent)
+
+     //change array element
+
+     let stu = ['ajay','ankit','narayan'];
+
+     stu[0,1]='pawan';
+     console.log(stu)
+
+     //array at
+     let addi = ['vijay','nagar','palasia','bholaram','chidiyaghar'];
+
+     let add2= addi.at(2);
+
+     console.log(add2);
+
+     //tostring
+
+     let strin =['bhawarkua','nepania','khajrana','robot square'];
+let str = strin.toString();
+     console.log(str);
+
+     //reverse
+
+     let place=['indore','ujjain','ratlam','pachmarhi','bhopal']
+
+     let newPlace=place.toReversed()
+
+     console.log(newPlace);
+
+     //indexOf
+     const fru = ["Appl", "Orange", "Apple", "Mango"];
+let position = fru.indexOf("Apple");
+console.log(position);
+
+//lastIndexOf
+
+let index = ['apache','pulsor','r15','jawa','bullet'];
+let newIndex = index.lastIndexOf('jawa')
+console.log(newIndex)
+
+//lenght
+
+let arrLength = ['a','b','c','d','e'];
+
+let findLength = arrLength.length;
+console.log(findLength);
+
+//slice
+
+// const alphabet = ["a", "b", "c", "d", "e"];
+// const newAlpha = alphabet.slice(2, 3);
+// console.log(newAlpha);
+
+//splice
+
+const alphabet = ["a", "b", "c", "d", "e","f","g"];
+ alphabet.splice(2,0,"ankit",'ajay');
+console.log(alphabet);
+
+// alphabet.splice(2,2);
+// console.log(alphabet)
+     
+
+    </script>
+
+</body>
+
+</html>

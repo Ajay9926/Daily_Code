@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button onclick="myFun()">Submit</button>
+
+    <script>
+
+        function myFun(){
+
+            console.log("Hello first function is called")
+
+
+        }
+        // myFun();
+
+//Function Decelaration
+    console.log(add(2,3));
+    	
+	function add(a,b){
+ 	 return a+b;
+	};
+	console.log(add(2,3));
+
+    //function expression
+	// console.log(sum(2,3));
+
+	let sum= function(a,b){
+	return a+b;
+	};
+	console.log(sum(10,3));
+
+//Arrow Function
+
+const Hello=()=>{
+    console.log("I am Hello")
+}
+Hello()
+
+
+function myFirst(a,b){
+ return a+b;
+}
+console.log(myFirst(30,75)) 
+
+const newFun=(a,b)=>a+b;
+console.log(newFun(10,20));
+
+const myNewFun=(()=>{
+
+})
+
+const fun1=()=>{
+
+}
+const fun2=()=>console.log("hello")
+
+const newNumber=(x,y)=>{
+    let add = x+y;
+console.log("The multiply of two numbers:", add);
+// return add;
+}
+
+let a = 25;
+let b = 40;
+
+ newNumber(a,b);
+// console.log("The value of summ",summ)
+// let c = a + b;
+// console.log("Thw newNumber of two :", c)
+
+let d = 2;
+let e = 20;
+
+newNumber(d,e)
+// let f = d + e;
+// console.log("Thw newNumber of two numbers is:", f);
+
+let g = 5;
+let h = 90;
+
+newNumber(g,h)
+// let i = g + h;
+// console.log("Thw addition of two numbers is:", i);
+
+// function addition(x,y){
+//     // debugger
+// let add = x+y;
+// console.log("The multiply of two numbers:", add);
+// // return add;
+// }
+
+
+function firstFun(a,b){
+
+    let newNum =childFun(a)
+    let newNum1 =childFun(b);
+
+
+function childFun(add){
+let number = add * add;
+return number;
+}
+return newNum + newNum1;
+
+}
+let newOutput=firstFun(5,10);
+console.log(newOutput);
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

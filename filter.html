@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let age = [10,18,20,15,11,25];
+let ages = age.filter((value)=>{
+ return value <= 15;
+
+})
+console.log(ages);
+
+let a = [1,2,5,0,10,0,0]
+let b = a.reduce((value,index)=>{
+return value + index;
+})
+console.log(b);
+
+
+//map
+let arr = [2,3,5,7,1];
+
+let newArr = arr.map((value,index,array)=>{
+
+return value + value;
+
+})
+console.log(newArr)
+let arrey = [2,3,5,7,1];
+
+let newArry = arrey.map((value,index,array)=>{
+
+return value + value;
+
+})
+console.log(newArry)
+
+let array = [2,3,5,7,1];
+
+let newArryy = array.map((value,index,array)=>{
+
+return value ** value;
+
+})
+console.log(newArryy)
+
+let arrayInd = [2,3,5,7,1];
+
+let newArryyInd = arrayInd.map((value,index,array)=>{
+
+return value + index;
+
+})
+console.log(newArryyInd)
+
+let arrayArray = [2,3,5,7,1];
+
+let newArryyArray = arrayArray.map((value,index,array)=>{
+
+return value * array;
+
+})
+console.log(newArryyArray)
+
+
+function addition(a,b){
+
+    
+
+    function sum(add){
+    return add + add
+    }
+
+    return addition1 ;
+    var addition1;
+    // var addition1 = sum(a);
+    var addition2 = sum(b);
+
+} 
+
+console.log(addition(2,4));
+
+
+</script>
+
+
+</body>
+</html>

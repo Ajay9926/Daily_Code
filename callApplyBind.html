@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //call
+
+//         const myObj={
+//             name:'ajay',
+//             stuName:'narayan'
+//         }
+
+//         function myFun(mname,lname){
+// return "Hello " + this.name +" "+ this.stuName +" "+ mname + " "+ lname
+
+
+//         }
+//         let data = myFun.call(myObj,'raj','varala');
+
+//         console.log(data)
+
+        //apply
+
+//         const myObj={
+//             name:'ajay',
+//             stuName:'narayan'
+//         }
+
+//         function myFun(mname,lname){
+// return "Hello " + this.name +" "+ this.stuName +" "+ mname + " "+ lname
+
+
+//         }
+//         let data = myFun.apply(myObj,['raj','varala']);
+
+//         console.log(data)
+
+    //bind
+
+        const myObj={
+            name:'ajay',
+            stuName:'narayan'
+        }
+
+        function myFun(mname,lname){
+return "Hello " + this.name +" "+ this.stuName +" "+ mname + " "+ lname
+
+
+        }
+        let data = myFun.bind(myObj,'raj','varala');
+
+        console.log(data())
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

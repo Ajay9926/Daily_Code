@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    //destructuring of Array
+const arr = ['narayan',20,'developer',['indore']];
+
+
+// let fname = arr[0];
+// console.log(fname)
+
+// let age = arr[1];
+// console.log(age)
+
+// let designation=arr[2];
+// console.log(designation)
+
+
+let [fname,,designation,[place]]=arr;
+console.log(arr)
+console.log(fname)
+// console.log(age)
+console.log(designation)
+console.log(place)
+
+
+//Destructuring of Object
+
+let student ={
+name:'narayan',
+designatio:'mern stack',
+mob:86848486456,
+address:{
+    name:'ajay',
+    houseNo:205555,
+    locality:'abcd',
+    pincode:75857
+}
+
+};
+
+console.log(student.address.houseNo);
+
+let {name, designatio, mob,address:{name:firName,houseNo,locality,pincode}}=student;
+console.log(name)
+console.log(designatio)
+console.log(mob)
+console.log(houseNo)
+console.log(locality)
+console.log(pincode)
+console.log(firName)
+console.log(student.address.houseNo)
+
+
+
+</script>
+
+
+
+</body>
+</html>

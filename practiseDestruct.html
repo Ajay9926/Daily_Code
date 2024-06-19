@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let studentData = ['anas',20,'cricket','indore','india','mp',['shubham']];
+
+// let fname = studentData[0];
+// console.log(fname);
+// let age = studentData[1]
+// console.log(age)
+
+// let [fname,age,hobby,city,country,state,[lname]]=studentData;
+
+// console.log(fname);
+// console.log(age)
+// console.log(hobby)
+// console.log(city)
+// console.log(country)
+// console.log(lname)
+
+
+let obj ={
+    name:'ajay',
+    age:'21',
+    designation:'developer',
+    hobby:'gossip',
+    address:{
+        name:'devi',
+city:'indore',
+state:'mp',
+country:'russia'
+    }
+};
+
+let {name, age,designation,hobby,address:{name:fname,city,state,country}}=obj;
+console.log(name);
+console.log(age)
+console.log(designation)
+console.log(hobby)
+console.log(city)
+
+    </script>
+
+
+</body>
+</html>

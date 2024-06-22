@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function myFun(name, ...args){
+let sum = 0;
+let alpha=[];
+for(let i in args){
+    if(typeof args[i] === 'number'){
+        sum = sum +args[i]
+    }else{
+        alpha.push(args[i])
+    }
+
+   
+}
+console.log(sum) ;
+console.log(alpha);
+}
+
+let newNum =[10,20,40,'ajay',40,'uttg']
+console.log(myFun('pawan', ...newNum))
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

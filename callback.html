@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function provideValue(){
+    console.log('i am Value')
+}
+function NewValue(){
+    console.log('i am New ')
+}
+
+        function sub(a,b, callback){
+            console.log( a + b)
+            callback();
+           
+
+        }
+       sub(10,2,provideValue)
+       sub(20,2,NewValue)
+       sub(20,2,(()=>{
+        console.log('Hello')
+       }))
+
+
+       function outPut(){
+        setTimeout(()=>{
+            console.log('I am Set Time out')
+        },2000)
+       }
+       console.log(outPut())
+
+
+
+    </script>
+
+
+</body>
+</html>

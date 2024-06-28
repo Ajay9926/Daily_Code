@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            position: relative;
+
+        }
+        .box1{
+            /* border: 2px solid black; */
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+        }
+        .box2{
+            /* border: 2px solid black; */
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="move">
+        <div class="box1" id="innerBox">
+
+        </div>
+        <div class="box2" id="inner2">
+
+        </div>
+
+    </div>
+    <button onclick="handelClick()">Click Me</button>
+    <script  src="anime.js"></script>
+</body>
+</html>

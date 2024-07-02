@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let data = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                let result = true;
+
+                if (result) {
+                    resolve('Your Promises 1 is Resolved')
+                } else {
+                    reject('Rejected promise')
+                }
+            }, 3000)
+
+        })
+        let data1 = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                let res = true;
+
+                if (res) {
+                    resolve('Your Promises 2 is Resolved')
+                } else {
+                    reject('Rejected promise')
+                }
+            }, 1000)
+
+        })
+        let data3 = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                let getData = true;
+
+                if (!getData) {
+                    resolve('Your Promises 3 is Resolved')
+                } else {
+                    reject('Rejected promise')
+                }
+            }, 500)
+
+        })
+
+        let myArray = [data,data1,data3];
+
+        Promise.any(myArray)
+
+        .then((resolve) => {
+            console.log(resolve)
+        }).catch((reject) => {
+            console.log(reject)
+        })
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

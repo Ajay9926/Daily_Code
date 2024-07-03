@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="myFun()" style="width: 1000px;height: 1000px;">
+    <center>
+
+        <h1>Browser Object Model</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button onclick="windowOpen()">Open Window</button>
+        <button onclick="windowClose()">Close Window</button><br>
+        <hr>
+<br>
+        <button onclick="windowMove()">Move Window</button>
+
+        <br>
+        <hr>
+        <br>
+        <button onclick="windowResizeTo()">Resize Window</button>
+        <br>
+        <hr>
+        <br>
+        <button onclick="scrollWindow()" style="position: fixed; left: 200px; top: 200px;">Scroll Window</button>
+
+        <br>
+        <hr>
+        <br>
+        <button onclick="openNewWindow()" >Reload Window</button>
+
+        
+    </center>
+
+    <script>
+        // let height = window.innerHeight
+
+        // console.log(height)
+
+        // let outerHeight = window.outerHeight
+
+        // console.log("i am outer height:",outerHeight)
+
+        // let width = window.innerWidth
+        // console.log(width)
+
+        // let outerWidth = window.outerWidth
+        // console.log("i am outer width", outerWidth)
+
+        let myFun =()=>{
+            console.clear()
+            let height = window.innerHeight
+
+        console.log("i am inner height:",height) 
+        let outerHeight = window.outerHeight
+
+        console.log("i am outer height:",outerHeight)
+
+        }
+
+        //Window open and close
+        // var myWindow;
+
+        // let windowOpen=()=>{
+        //     myWindow= window.open("","", "width=400px,height= 400px, left=200px, top=200px");
+
+        // }
+
+        // let windowClose=()=>{
+        //     myWindow.close();
+
+        // }
+        
+        //moveTo and moveBy
+
+        //  var myWindow;
+
+        // let windowOpen=()=>{
+        //     myWindow= window.open("","", "width=400px,height= 400px, left=200px, top=200px");
+
+        //     // document.write("<h1>Hello i am Ajay </h1>");
+
+        // }
+        // let windowMoveBy=()=>{
+        //     myWindow.moveBy(100,100);
+
+        // }
+
+        // let windowMoveTo=()=>{
+        //     myWindow.moveBy(100,100);
+
+        // }
+
+        // resizeTo and resizeBy
+
+        //   var myWindow;
+
+
+        // let windowOpen=()=>{
+        //     myWindow= window.open("","", "width=400px,height= 400px, left=200px, top=200px");
+
+        //     // myWindow = document.write("<h1>Hello i am Ajay </h1>");
+
+        // }
+        
+      
+
+        // let windowResizeTo=()=>{
+        //     myWindow.resizeBy(200,200);
+
+        // }
+
+          var myWindow;
+
+
+        // let windowOpen=()=>{
+        //     myWindow= window.open("","", "width=400px,height= 400px, left=200px, top=200px");
+
+       
+
+        // }
+        
+      
+
+        let windowScrollBy=()=>{
+            window.scrollBy(-100,0);
+
+        }
+
+        var scrollAmount = 0;
+           function scrollWindow() {
+        // scrollAmount = scrollAmount + 200; // Increment scroll amount
+            window.scrollTo({
+                // left: scrollAmount, // Scroll horizontally
+                top: 500, // Keep vertical scroll position at 0
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+
+
+        let openNewWindow=()=>{
+
+            location.replace("https://www.google.com")
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

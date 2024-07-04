@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        .main{
+            border: 2px solid grey;
+    border-radius: 5px;
+    width: 20%;
+    height: 50%;
+    padding: 39px;
+    position: relative;
+    margin: auto;
+    margin-top: 109px;
+        }
+        /* .content{
+            padding: 10px;
+        } */
+        .inp{
+            margin-top: 15px;
+            margin-left: 35px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form class="content" onsubmit="addData(event)">
+            <h1>Register Form</h1>
+            <label>Name:</label>
+            <input type="text" id="fname" class="inp" placeholder="Enter your name" > <br>
+            <label>Email:</label>
+            <input type="email" id="email" class="inp" placeholder="Enter Email" > <br>
+            <label>Password:</label>
+            <input type="password" id="password" class="inp" placeholder="Enter password" > <br>
+            <label>Confirm Pass:</label>
+            <input type="password" id="confirm" class="inp" placeholder="Enter confirm password" > <br>
+            <input type="submit" id="btn" >
+
+
+        </form>
+
+
+
+
+    </div>
+
+    <script>
+
+        function addData(event){
+            event.preventDefault();
+            // debugger
+            let fname = document.getElementById('fname').value;
+            let email = document.getElementById('email').value;
+            let password= document.getElementById('password').value;
+            let confirm= document.getElementById('confirm').value;
+
+// console.log(fname)
+// console.log(email)
+// console.log(password)
+
+            if(!fname || !email || !password || !confirm){
+                alert('All fields are necessary to fill')
+                return
+            }
+            if(password !== confirm){
+                alert("password and confirm password does not match")
+                return;
+            }
+
+
+            let getData = JSON.parse(localStorage.getItem('myData'))?JSON.parse(localStorage.getItem('myData')):[]
+
+
+            if(getData.some((value)=>{
+              return  value.email == email
+
+            })){
+                alert("Email already exist")
+                return;
+            }
+
+            let stuObj ={
+                "fname":fname,
+                "email":email,
+                "password":password,
+                "confirm":confirm
+            }
+            getData.push(stuObj)
+
+
+            localStorage.setItem("myData",JSON.stringify(getData))
+            alert("Data succesfully Submitted")
+
+            window.location.href='loginPage.html';
+
+
+
+        }
+
+       
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

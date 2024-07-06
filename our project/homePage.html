@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Welcome 
+            <script>
+                document.write(localStorage.getItem('name'))
+            </script>
+
+        </h1>
+
+        <table id="myTab">
+            <thead>
+                <tr>
+                    <th>SNO</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Confirm</th>
+                    <th>Action</th>
+                
+                </tr>
+            </thead>
+            <tbody id="myTabData">
+
+            </tbody>
+
+        </table>
+    </center>
+
+    <center>
+        <form class="content" style="display: none;" id="forms" onsubmit="updateData(event)" >
+            <h1>Update Student</h1>
+            <label>Name:</label>
+            <input type="text" id="fname" class="inp" placeholder="Enter your name" > <br>
+            <label>Email:</label>
+            <input type="email" id="email" class="inp" placeholder="Enter Email" > <br>
+            <label>Password:</label>
+            <input type="password" id="password" class="inp" placeholder="Enter password" > <br>
+            <label>Confirm Pass:</label>
+            <input type="password" id="confirm" class="inp" placeholder="Enter confirm password" > <br>
+            <input type="submit" id="btn" >
+            <button onclick="closeForm()">Cancel</button>
+        </form>
+    </center>
+
+    <script>
+
+        function showToTable(){
+            let data = JSON.parse(localStorage.getItem('myData'));
+        let showData = document.getElementById('myTabData');
+
+        let printData = data.map((value, index)=>{
+            return `
+            <tr>
+            <td>${index + 1}</td>
+            <td> ${value.fname} </td>
+            <td> ${value.email} </td>
+            <td> ${value.password} </td>
+            <td> ${value.confirm} </td>
+            <td>
+                        <button onclick="openForm('${value.email}')">Edit</button>
+                        <button onclick="deleteRow('${value.email}')">Delete</button>
+                    </td>
+            </tr>
+
+            `
+
+        })
+        showData.innerHTML=printData.join('')
+
+        }
+        showToTable();
+
+
+
+        function deleteRow(email){
+            debugger
+        let data = JSON.parse(localStorage.getItem('myData'));
+
+        let myEmail = data.findIndex((item)=>{
+            return item.email === email;
+        })
+        
+        data.splice(myEmail,1)
+        localStorage.setItem('myData',JSON.stringify(data))
+        showToTable()
+    }
+
+    function openForm(email){
+        debugger
+        let data = JSON.parse(localStorage.getItem('myData'));
+
+    let findData = data.find((value)=>{
+      return  value.email == email
+    })
+
+    if(findData){
+        document.getElementById('fname').value=findData.fname;
+        document.getElementById('email').value=findData.email;
+        document.getElementById('password').value=findData.password;
+        document.getElementById('confirm').value=findData.confirm;
+        document.getElementById('email').disabled= true;
+    }
+        let edit = document.getElementById('forms');
+        edit.style.display='block'
+    }
+
+    function closeForm(email){
+        let edit = document.getElementById('forms');
+        edit.style.display='none'
+    }
+      
+
+    function updateData(event){
+        event.preventDefault()
+        let fname = document.getElementById('fname').value;
+            let email = document.getElementById('email').value;
+            let password= document.getElementById('password').value;
+            let confirm= document.getElementById('confirm').value;
+
+
+            let data = JSON.parse(localStorage.getItem('myData'));
+            if( password.length < 4 ){
+                alert('Your password is week')
+                return
+            }else if(password.length <= 6  && !/[@,$,%]/.test(password) ){
+                alert('Your password must contain atleast one character(@,$,%)')
+                return
+
+            }
+
+        let myEmail = data.findIndex((item)=>{
+            return item.email === email;
+        })
+
+        data[myEmail]={fname, email, password, confirm};
+
+        localStorage.setItem('myData',JSON.stringify(data));
+    }
+
+    </script>
+
+    
+    
+</body>
+</html>

@@ -8,6 +8,11 @@ function Test() {
 
 
   const {user} =record[0]
+  const {userAge} =record[1]
+  const {userInfo} =record[2]
+  console.log(record)
+
+  console.log(userAge)
 
 
 
@@ -33,8 +38,44 @@ function Test() {
   return (
     <div>
       <h1>Test </h1>
+
+      <table>
+        <tr>
+          <th> Age </th>
+          <th> Name </th>
+
+        </tr>
+        {
+        userAge.map((value, index)=>{
+          return(
+            <tbody key={index}>
+            <tr key={index}>
+              <td> {value.age} </td>
+              <td> {value.name} </td>
+            </tr>
+            </tbody>
+
+          )
+        })
+      }
+
+
+      </table>
+
+
+    <select>
+      <option>Select</option>
+      {userAge && userAge.map((value, index)=>(
+
+        <option key={index}> {value.age} </option>
+        
+        ) )}
+
+
+    </select>
+
     <div>
-    <table border='2px solid black'>
+   <table border='2px solid black'>
       <tbody>
       <tr>
         <th>Name</th>
@@ -53,22 +94,15 @@ function Test() {
         })
       }
 
-    </table>
+    </table> 
 
       <select>
-        <option>All Student</option>(
-          {
-        user.map((value,index)=>{
-          return(
+        <option>All Student</option>
+          { user.map((value,index)=>(
+            
             <option key={index}> {value.name} </option>
-          )
-        })
-       }
 
-        )
-      
-     
-
+          ))}
 
       </select>
 

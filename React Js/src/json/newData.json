@@ -1,0 +1,26 @@
+
+    {
+        "student":[
+            {"name":"Narayan", "age":"20"},
+            {"name":"Ankit", "age":"22"},
+            {"name":"ajay", "age":"20"},
+            {"name":"shubham"},
+            {"name":"amit"},
+            {"name":"anas"},
+            {"name":"pooja"},
+            {"name":"abhishek"},
+            {"name":"siddharth"},
+            {"name":"Vishal"},
+            {"name":"Twinkal"},
+            {"name":"Sakshi"}
+        ],
+        "address":[
+            {"place":"indore"},
+            {"place":"bhopal"}
+        ],
+        "salary":[
+            {"mySlary":"100000"},
+            {"mySlary":"50000"},
+            {"mySlary":"500 per hour"}
+        ]
+    }

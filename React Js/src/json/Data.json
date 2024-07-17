@@ -12,5 +12,24 @@
             {"name":"Vishal"},
             {"name":"Anurag"}
         ]
+    },
+    {
+        "userAge":[
+            { "age":"10","name":"ajay"},
+            { "age":"20","name":"narayan"},
+            { "age":"30","name":"amit"},
+            { "age":"15"},
+            { "age":"25"}
+        ]
+    },
+    {
+        "userInfo":[
+            {"address":"indore"},
+            {"address":"bhopal"},
+            {"address":"rajwada"},
+            {"address":"pachmarhi"},
+            {"address":"haridwar"}
+        ]
     }
+    
 ]

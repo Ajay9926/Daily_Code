@@ -6,9 +6,9 @@ function Json() {
   const {user} =record[0]
 
 
-  useEffect(()=>{
-    console.log('My state is updated')
-  },[data, decrement])
+//   useEffect(()=>{
+//     console.log('My state is updated')
+//   },[data, decrement])
 
 
 
@@ -40,7 +40,7 @@ function Json() {
       <select>
         <option>All Student</option>(
           {
-        user.map((value,index)=>{
+        record.map((value,index)=>{
           return(
             <option key={index}> {value.name} </option>
           )
